@@ -36,191 +36,207 @@
 </script>
 </head><body>
 <div id="mainContainer">
-  <header>
-    <div class="login menu-text hidden-mobile">
-        <!--START: login-->[account_greeting] [username]!&nbsp;&nbsp;<a href="myaccount.asp">Login</a><!--END: login--> 
-        <!--START: username-->[account_greeting] [username]!&nbsp;&nbsp;<a href="logout.asp">Logout</a><!--END: username--></div>
-        <div class="cart hidden-mobile" onclick="window.location.href='view_cart.asp';">[SUBTOTAL]</div>
-        <div class="cart hidden-mobile" onclick="window.location.href='view_cart.asp';"><span id="noItems">[ITEMSINCART]</span> <span id="noItemsText">Item</span></div>
-        <a href="#" id="search" class="hidden-mobile" onclick="javascript:searchModal();"></a>
-        <div class="clear"></div>
-        <a id="slideMenu"><i class="icon-menu"></i></a>
-        <a id="mobileMenu"><i class="icon-menu"></i></a> <a href="view_cart.asp" id="mobileCart"><i class="icon-basket"></i></a>
-        <div id="logo">
-            <!--START: global_header-->
-                <h1 class="store-name">[storename]</h1>
-                <h3 class="store-slogan">[storeslogan]</h3>
-            <!--END: global_header-->
-        </div>
-  </header>
-  <nav></nav>
-  <div id="frameHomeCarousel"></div>
-  <!--START: LEFT BAR-->
-  <aside id="leftBar" class="leftBar">
-    <a id="closeSlideMenu"><i class="icon-menu"></i></a>
-    <div class="clear"></div>
-    <div class="column" id="column1"> 
-      <!--START: LEFT_BAR_BLOCKS-->
-      <!--START: FRAME_CATEGORY-->
-      <div id="modCategory" class="module"> <span class="menu-headers">[frame_categories]</span>
-        <ul class="mobile">
-          <!--START: CATEGORIES--> 
-          <!--START: CATEGORY_FORMAT-->
-          <li><a href="view_category.asp?cat=CATID" class="cat">CATEGORY</a></li>
-          <!--END: CATEGORY_FORMAT--> 
-          <!--END: CATEGORIES-->
-        </ul>
-      </div>
-      <!--END: FRAME_CATEGORY-->  
-      <!--START: FRAME_MANUFACTURER-->
-      <div id="modManufacturer" class="module"> <span class="menu-headers">[frame_manufacturer]</span>
-        <form name="mfg" id="mfg" method="get" action="search_groups.asp">
-        <div class="manf-select">
-          <select name="manf" onchange="this.form.submit();">
-            <option value="0" selected="selected">Manufacturer</option>
-            <!--START: manufacturer_format-->
-            <option value="[mfgid]">[manufacturer]</option>
-            <!--END: manufacturer_format-->
-          </select>
-        </div>
-        </form>
-      </div>
-      <!--END: FRAME_MANUFACTURER--> 
-      <!--START: FRAME_BYPRICE-->
-      <div id="modPrice" class="module"> <span class="menu-headers">[frame_byprice]</span>
-        <ul>
-          <!--START: byprice_format-->
-          <li><a href="search_groups.asp?keyword=[id]&byprice=[id]" class="cat">[title]</a></li>
-          <!--END: byprice_format-->
-        </ul>
-      </div>
-      <!--END: FRAME_BYPRICE--> 
-      <!--START: NEW_RELEASES_BLOCK-->
-      <div id="modNewReleases" class="module"> <span class="menu-headers">[frame_new-releases]</span>
-        <div class="clear"></div>
-        <!--START: newreleases--> 
-        
-        <!--START: newreleases_topitem-->
-        <div class="info">
-          <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
-          <div class="price2"><!--START: ITEMPRICE--> 
-            [ITEMPRICE] 
-            <!--END: ITEMPRICE--> 
-            <!--START: SALEPRICE--> 
-            [ITEMSALEPRICE] 
-            <!--END: SALEPRICE--></div>
-        </div>
-        <div class="clear"></div>
-        <!--END: newreleases_topitem--> 
-        
-        <!--START: newreleases_item-->
-        <div class="div"></div>
-        <div class="info">
-          <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
-          <div class="price2"><!--START: ITEMPRICE--> 
-            [ITEMPRICE] 
-            <!--END: ITEMPRICE--> 
-            <!--START: SALEPRICE--> 
-            [ITEMSALEPRICE] 
-            <!--END: SALEPRICE--></div>
-        </div>
-        <div class="clear"></div>
-        <!--END: newreleases_item--> 
-        
-        <!--END: newreleases--> 
-      </div>
-      <!--END: NEW_RELEASES_BLOCK--> 
-      <!--START: TOP_SELLERS_BLOCK-->
-      <div id="modTopSellers" class="module"> <span class="menu-headers">[frame_top-sellers]</span>
-        <div class="clear"></div>
-        <!--START: topsellers--> 
-        
-        <!--START: topsellers_topitem-->
-        <div class="info">
-          <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
-          <div class="price2"><!--START: ITEMPRICE--> 
-            [ITEMPRICE] 
-            <!--END: ITEMPRICE--> 
-            <!--START: SALEPRICE--> 
-            [ITEMSALEPRICE] 
-            <!--END: SALEPRICE--></div>
-        </div>
-        <div class="clear"></div>
-        <!--END: topsellers_topitem--> 
-        
-        <!--START: topsellers_item-->
-        <div class="div"></div>
-        <div class="info">
-          <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
-          <div class="price2"><!--START: ITEMPRICE--> 
-            [ITEMPRICE] 
-            <!--END: ITEMPRICE--> 
-            <!--START: SALEPRICE--> 
-            [ITEMSALEPRICE] 
-            <!--END: SALEPRICE--></div>
-        </div>
-        <div class="clear"></div>
-        <!--END: topsellers_item--> 
-        
-        <!--END: topsellers--> 
-      </div>
-      <!--END: TOP_SELLERS_BLOCK--> 
-      <!--START: LEFT_BANNER-->
-      <div id="leftBanner">[LEFT_BANNER]</div>
-      <!--END: LEFT_BANNER--> 
-      <!--END: LEFT_BAR_BLOCKS--> 
-    </div>
-  </aside>
-  <!--END: LEFT BAR-->
-  <div id="mainContent">MIDDLE</div>
-  <div class="clear"></div>
-  <footer> 
-    <!--START: FRAME_LINKS-->
-    <ul>
-      <!--START: LINKS--> 
-      <!--START: LINK_FORMAT-->
-      <li><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
-      <li class="div"></li>
-      <!--END: LINK_FORMAT--> 
-      <!--END: LINKS-->
-    </ul>
-    <!--END: FRAME_LINKS-->
-    <div class="social-icons"> <a href="/" class="pinterest"></a> <a href="/" class="twitter"></a> <a href="/" class="facebook"></a>
-      <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-    <!--START: FRAME_MAILLIST-->
-    <div class="mailist-box">
-    <form method="post" name="mailing" action="mailing_list.asp?action=add" onsubmit="return mailing_list();">
-      <input type="hidden" name="subscribe" value="1" checked="checked" />
-      <label>[frame_mailinglist]</label>
-      <input type="text" name="email" onfocus="javascript:if (document.mailing.email.value=='your e-mail here') {document.mailing.email.value='';};"  onblur="if(this.value.length == 0) this.value = 'your e-mail here'" value="your e-mail here" />
-      <input type="submit" name="www" value="[mailinglist_button]" />
-      <div class="clear"></div>
-    </form>
-    <div class="clear"></div></div>
-    <!--END: FRAME_MAILLIST-->
-    <div id="copyright" class="footer">[frame_copyright1]</div>
-    <div class="clear"></div>
-    <div id="globalFooter" class="footer">[GLOBAL_FOOTER]</div>
-    <div class="clear"></div>
-  </footer>
+		<header>
+				<div class="login menu-text hidden-mobile"> 
+						<!--START: login-->[account_greeting] [username]!&nbsp;&nbsp;<a href="myaccount.asp">Login</a><!--END: login--> 
+						<!--START: username-->[account_greeting] [username]!&nbsp;&nbsp;<a href="logout.asp">Logout</a><!--END: username--></div>
+				<div class="cart hidden-mobile" onclick="window.location.href='view_cart.asp';">[SUBTOTAL]</div>
+				<div class="cart hidden-mobile" onclick="window.location.href='view_cart.asp';"><span id="noItems">[ITEMSINCART]</span> <span id="noItemsText">Item</span></div>
+				<a href="#" id="search" class="hidden-mobile" onclick="javascript:searchModal();"></a>
+				<div class="clear"></div>
+				<a id="slideMenu"><i class="icon-menu"></i></a>
+				<a id="mobileSlideMenu"><i class="icon-ellipsis-vert"></i></a>
+				<a id="mobileMenu"><i class="icon-menu"></i></a>
+				<a href="view_cart.asp" id="mobileCart"><i class="icon-basket"></i></a>
+				<div id="logo"> 
+						<!--START: global_header-->
+						<h1 class="store-name">[storename]</h1>
+						<h3 class="store-slogan">[storeslogan]</h3>
+						<!--END: global_header--> 
+				</div>
+				<!--START: FRAME_MENU-->
+				<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="showSlideMenu">
+				<a id="closeMobileSlideMenu" class="show-mobile"><i class="icon-cancel-circled"></i></a>
+				<div class="clear"></div>
+						<ul>
+								<!--START: menuitems_view--> 
+								<!--START: TOP_LINK_FORMAT-->
+								<li><a href="infopage.asp?page=[link_id]" target="[link_target]" class="menu">[link_name]</a></li>
+								<li class="div"></li>
+								<!--END: TOP_LINK_FORMAT--> 
+								<!--END: menuitems_view-->
+						</ul>
+				</div>
+				<!--END: FRAME_MENU--> 
+		</header>
+		<nav></nav>
+		<div id="frameHomeCarousel"></div>
+		<!--START: LEFT BAR-->
+		<aside id="leftBar" class="leftBar"> <a id="closeSlideMenu"><i class="icon-menu"></i></a>
+				<div class="clear"></div>
+				<div class="column" id="column1"> 
+						<!--START: LEFT_BAR_BLOCKS--> 
+						<!--START: FRAME_CATEGORY-->
+						<div id="modCategory" class="module"> <span class="menu-headers">[frame_categories]</span>
+								<ul class="mobile">
+										<!--START: CATEGORIES--> 
+										<!--START: CATEGORY_FORMAT-->
+										<li><a href="view_category.asp?cat=CATID" class="cat">CATEGORY</a></li>
+										<!--END: CATEGORY_FORMAT--> 
+										<!--END: CATEGORIES-->
+								</ul>
+						</div>
+						<!--END: FRAME_CATEGORY--> 
+						<!--START: FRAME_MANUFACTURER-->
+						<div id="modManufacturer" class="module"> <span class="menu-headers">[frame_manufacturer]</span>
+								<form name="mfg" id="mfg" method="get" action="search_groups.asp">
+										<div class="manf-select">
+												<select name="manf" onchange="this.form.submit();">
+														<option value="0" selected="selected">Manufacturer</option>
+														<!--START: manufacturer_format-->
+														<option value="[mfgid]">[manufacturer]</option>
+														<!--END: manufacturer_format-->
+												</select>
+										</div>
+								</form>
+						</div>
+						<!--END: FRAME_MANUFACTURER--> 
+						<!--START: FRAME_BYPRICE-->
+						<div id="modPrice" class="module"> <span class="menu-headers">[frame_byprice]</span>
+								<ul>
+										<!--START: byprice_format-->
+										<li><a href="search_groups.asp?keyword=[id]&byprice=[id]" class="cat">[title]</a></li>
+										<!--END: byprice_format-->
+								</ul>
+						</div>
+						<!--END: FRAME_BYPRICE--> 
+						<!--START: NEW_RELEASES_BLOCK-->
+						<div id="modNewReleases" class="module"> <span class="menu-headers">[frame_new-releases]</span>
+								<div class="clear"></div>
+								<!--START: newreleases--> 
+								
+								<!--START: newreleases_topitem-->
+								<div class="info">
+										<div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+										<div class="price2"><!--START: ITEMPRICE--> 
+												[ITEMPRICE] 
+												<!--END: ITEMPRICE--> 
+												<!--START: SALEPRICE--> 
+												[ITEMSALEPRICE] 
+												<!--END: SALEPRICE--></div>
+								</div>
+								<div class="clear"></div>
+								<!--END: newreleases_topitem--> 
+								
+								<!--START: newreleases_item-->
+								<div class="div"></div>
+								<div class="info">
+										<div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+										<div class="price2"><!--START: ITEMPRICE--> 
+												[ITEMPRICE] 
+												<!--END: ITEMPRICE--> 
+												<!--START: SALEPRICE--> 
+												[ITEMSALEPRICE] 
+												<!--END: SALEPRICE--></div>
+								</div>
+								<div class="clear"></div>
+								<!--END: newreleases_item--> 
+								
+								<!--END: newreleases--> 
+						</div>
+						<!--END: NEW_RELEASES_BLOCK--> 
+						<!--START: TOP_SELLERS_BLOCK-->
+						<div id="modTopSellers" class="module"> <span class="menu-headers">[frame_top-sellers]</span>
+								<div class="clear"></div>
+								<!--START: topsellers--> 
+								
+								<!--START: topsellers_topitem-->
+								<div class="info">
+										<div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+										<div class="price2"><!--START: ITEMPRICE--> 
+												[ITEMPRICE] 
+												<!--END: ITEMPRICE--> 
+												<!--START: SALEPRICE--> 
+												[ITEMSALEPRICE] 
+												<!--END: SALEPRICE--></div>
+								</div>
+								<div class="clear"></div>
+								<!--END: topsellers_topitem--> 
+								
+								<!--START: topsellers_item-->
+								<div class="div"></div>
+								<div class="info">
+										<div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+										<div class="price2"><!--START: ITEMPRICE--> 
+												[ITEMPRICE] 
+												<!--END: ITEMPRICE--> 
+												<!--START: SALEPRICE--> 
+												[ITEMSALEPRICE] 
+												<!--END: SALEPRICE--></div>
+								</div>
+								<div class="clear"></div>
+								<!--END: topsellers_item--> 
+								
+								<!--END: topsellers--> 
+						</div>
+						<!--END: TOP_SELLERS_BLOCK--> 
+						<!--START: LEFT_BANNER-->
+						<div id="leftBanner">[LEFT_BANNER]</div>
+						<!--END: LEFT_BANNER--> 
+						<!--END: LEFT_BAR_BLOCKS--> 
+				</div>
+		</aside>
+		<!--END: LEFT BAR-->
+		<div id="mainContent">MIDDLE</div>
+		<div class="clear"></div>
+		<footer> 
+				<!--START: FRAME_LINKS-->
+				<ul>
+						<!--START: LINKS--> 
+						<!--START: LINK_FORMAT-->
+						<li><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
+						<li class="div"></li>
+						<!--END: LINK_FORMAT--> 
+						<!--END: LINKS-->
+				</ul>
+				<!--END: FRAME_LINKS-->
+				<div class="social-icons"> <a href="/" class="pinterest"></a> <a href="/" class="twitter"></a> <a href="/" class="facebook"></a>
+						<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<!--START: FRAME_MAILLIST-->
+				<div class="mailist-box">
+						<form method="post" name="mailing" action="mailing_list.asp?action=add" onsubmit="return mailing_list();">
+								<input type="hidden" name="subscribe" value="1" checked="checked" />
+								<label>[frame_mailinglist]</label>
+								<input type="text" name="email" onfocus="javascript:if (document.mailing.email.value=='your e-mail here') {document.mailing.email.value='';};"  onblur="if(this.value.length == 0) this.value = 'your e-mail here'" value="your e-mail here" />
+								<input type="submit" name="www" value="[mailinglist_button]" />
+								<div class="clear"></div>
+						</form>
+						<div class="clear"></div>
+				</div>
+				<!--END: FRAME_MAILLIST-->
+				<div id="copyright" class="footer">[frame_copyright1]</div>
+				<div class="clear"></div>
+				<div id="globalFooter" class="footer">[GLOBAL_FOOTER]</div>
+				<div class="clear"></div>
+		</footer>
 </div>
 <!--START: FRAME_SEARCH-->
 <div id="searchBox">
-  <form method="get" name="searchForm" action="search.asp">
-    <input type="text" id="searchlight" name="keyword" class="search-text" value="" placeholder="SEARCH" />
-    <input type="submit" name="search" value="" class="search-btn" />
-  </form>
-  <div class="clear"></div>
+		<form method="get" name="searchForm" action="search.asp">
+				<input type="text" id="searchlight" name="keyword" class="search-text" value="" placeholder="SEARCH" />
+				<input type="submit" name="search" value="" class="search-btn" />
+		</form>
+		<div class="clear"></div>
 </div>
-<!--END: FRAME_SEARCH--> 
+<!--END: FRAME_SEARCH-->
 <li class="mobile-search">
-<form method="get" name="mSearchForm" action="search.asp">
-  <input type="text" name="keyword" value="" placeholder="SEARCH" />
-  <input type="submit" name="search" value="" />
-  <div class="clear"></div>
-</form>
+		<form method="get" name="mSearchForm" action="search.asp">
+				<input type="text" name="keyword" value="" placeholder="SEARCH" />
+				<input type="submit" name="search" value="" />
+				<div class="clear"></div>
+		</form>
 </li>
 <script type="text/javascript" src="assets/templates/common-html5/js/jquery.simplemodal.min.js"></script> 
 <!--START: quicksearch--> 
@@ -231,7 +247,7 @@ jQuery(function() {
 });
 </script> 
 <!--END: quicksearch--> 
-<script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
+<script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script> 
 <script type="text/javascript">
 jQuery(function() {
 	if (jQuery(window).width() <= 767) {
@@ -245,36 +261,36 @@ jQuery(function() {
 });
 </script>
 <div class="stats"> 
-<!--START: 3dcart stats--> 
-<script type="text/javascript">
-//<![CDATA[
-var file='/stats/count.asp';
-
-var stats_d=new Date();
-var stats_s=stats_d.getSeconds();
-var stats_m=stats_d.getMinutes();
-var stats_x=stats_s*stats_m;
-var prdID = '[catalogid]';
-var catID = '[catid]';
-
-stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
-if (navigator.appName=='Netscape'){stats_b='NS';}
-if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
-if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
-stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
-stats_v=navigator.appName;
-stats_fs = window.screen.fontSmoothingEnabled;
-if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
-else {stats_c=screen.pixelDepth;}
-stats_j=navigator.javaEnabled();
-info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
-document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
-//]]>
-</script>
-<noscript>
-<img src="/stats/count.asp" width="90" height="30" alt="" />
-</noscript>
-<!--END: 3dcart stats--> 
+	<!--START: 3dcart stats--> 
+	<script type="text/javascript">
+		//<![CDATA[
+		var file='/stats/count.asp';
+		
+		var stats_d=new Date();
+		var stats_s=stats_d.getSeconds();
+		var stats_m=stats_d.getMinutes();
+		var stats_x=stats_s*stats_m;
+		var prdID = '[catalogid]';
+		var catID = '[catid]';
+		
+		stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
+		if (navigator.appName=='Netscape'){stats_b='NS';}
+		if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
+		if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
+		stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
+		stats_v=navigator.appName;
+		stats_fs = window.screen.fontSmoothingEnabled;
+		if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
+		else {stats_c=screen.pixelDepth;}
+		stats_j=navigator.javaEnabled();
+		info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
+		document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
+		//]]>
+	</script>
+	<noscript>
+		<img src="/stats/count.asp" width="90" height="30" alt="" />
+	</noscript>
+	<!--END: 3dcart stats--> 
 </div>
 </body>
 </html>
